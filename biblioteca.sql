@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Ago-2025 às 14:10
+-- Tempo de geração: 01-Set-2025 às 14:08
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `biblioteca`
 --
+CREATE DATABASE IF NOT EXISTS `biblioteca` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `biblioteca`;
 
 -- --------------------------------------------------------
 
@@ -45,7 +47,8 @@ INSERT INTO `livros` (`id`, `autor`, `titulo`, `genero`, `ano`, `paginas`) VALUE
 (2, 'William Golding', 'Senhor das Moscas', 'Ficção', 1954, 215),
 (3, 'Jane Austen', 'Orgulho e Preconceito', 'Romance', 1813, 288),
 (4, 'Rick Riordan', 'A Maldição do Titã', 'Fantasia', 2007, 336),
-(5, 'Stephen King', 'O Iluminado', 'Horror', 1977, 520);
+(5, 'Stephen King', 'O Iluminado', 'Terror', 1977, 464),
+(6, 'C.S. Lewis', 'O Sobrinho do Mago', 'Fantasia', 1955, 192);
 
 --
 -- Índices para tabelas despejadas
@@ -65,7 +68,7 @@ ALTER TABLE `livros`
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
