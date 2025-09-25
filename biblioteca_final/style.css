@@ -1,4 +1,60 @@
-body {
+/* body {
     background-color: #8ACE00;
-    font-family: "Archivo Narrow", sans-serif; /* usa sua fonte */
+    font-family: "Archivo Narrow", sans-serif;
+} */
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #8ACE00;
+    font-family: 'Archivo Narrow', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    min-height: 100vh;
+}
+.container {
+    width: 90%; /* ou um valor fixo como 800px */
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+/* Inputs e textareas transparentes */
+input.form-control,
+textarea.form-control,
+select.form-control {
+    background-color: transparent;
+    border: 1px solid #fff; /* opcional: borda branca para ficar visível */
+    color: #fff; /* texto branco */
+}
+
+input.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* placeholder mais claro */
+}
+
+/* Tabela transparente */
+table.table {
+    background-color: transparent;
+    color: #fff; /* cor do texto */
+}
+
+table.table th,
+table.table td {
+    border-color: #fff; /* bordas visíveis */
+}
+
+table.table thead {
+    background-color: rgba(255, 255, 255, 0.1); /* cabeçalho levemente destacado */
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.2); /* fundo semi-transparente */
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
