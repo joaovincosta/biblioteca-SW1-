@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Set-2025 às 14:08
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- Tempo de geração: 27/09/2025 às 04:28
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,7 +26,7 @@ USE `biblioteca`;
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `livros`
+-- Estrutura para tabela `livros`
 --
 
 CREATE TABLE `livros` (
@@ -36,10 +36,10 @@ CREATE TABLE `livros` (
   `genero` varchar(255) NOT NULL,
   `ano` int(4) NOT NULL,
   `paginas` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `livros`
+-- Despejando dados para a tabela `livros`
 --
 
 INSERT INTO `livros` (`id`, `autor`, `titulo`, `genero`, `ano`, `paginas`) VALUES
@@ -48,27 +48,29 @@ INSERT INTO `livros` (`id`, `autor`, `titulo`, `genero`, `ano`, `paginas`) VALUE
 (3, 'Jane Austen', 'Orgulho e Preconceito', 'Romance', 1813, 288),
 (4, 'Rick Riordan', 'A Maldição do Titã', 'Fantasia', 2007, 336),
 (5, 'Stephen King', 'O Iluminado', 'Terror', 1977, 464),
-(6, 'C.S. Lewis', 'O Sobrinho do Mago', 'Fantasia', 1955, 192);
+(6, 'C.S. Lewis', 'O Sobrinho do Mago', 'Fantasia', 1955, 192),
+(7, 'George Orwell', 'A Revolução dos Bichos', 'Fábula', 1945, 142),
+(8, 'Anne Frank', 'O Diário de Anne Frank', 'Autobiografia', 1947, 255);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `livros`
+-- Índices de tabela `livros`
 --
 ALTER TABLE `livros`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
